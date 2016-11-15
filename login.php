@@ -6,15 +6,16 @@
 <form class="form-inline">
   <div class="form-group">
     <label for="user">Usuario</label>
-    <input type="text" class="form-control" id="user" placeholder="usuario">
+    <input type="text" class="form-control" id="user" placeholder="Usuário">
   </div>
+  <div class="form-group"> </div>
   <div class="form-group">
-    <label for="exampleInputEmail2">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="@hotmail.com">
+    <label for="senha">Senha</label>
+    <input type="password" class="form-control" id="pass" placeholder="******">
   </div>
   <button type="submit" class="btn btn-default">Ok</button>
-  <a href="cadastro.php">Não tem login,cadastrar-se</a><br>
 </form>
-
+<br>
+  <a href="cadastro.php"><p>Não tem login,cadastrar-se</p></a><br>
 </div>
 <?php include 'layouts/footer.php'; ?>

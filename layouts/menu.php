@@ -18,7 +18,6 @@
         <li><a href="horario.php">Horarios</a></li>
         <li><a href="aulas.php">Aulas</a></li>
         <li><a href="login.php">Login</a></li>
-        <li><a href="cadastro.php">Cadastrar</a></li>
         <li><a href="contato.php">Contato</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
