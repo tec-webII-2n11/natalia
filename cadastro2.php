@@ -8,14 +8,14 @@
 				<input type="hidden" name="user" value="<?php echo $user; ?>"> 
 				<input type="hidden" name="pass" value="<?php echo $pass; ?>"> 
 
-	<form class="form-group" method="POST"  action="cadastro1.php">
+	<form class="form-group" method="POST"  action="val-etapa2.php">
   <div class="form-group">
     <label for="tel">Telefone</label>
-    <input type="text" class="form-control" id="tel" placeholder="(11) 99999-9999">
+    <input type="text" class="form-control" name="tel" placeholder="(11) 99999-9999">
   </div>
    <div class="form-group">
     <label for="end">Endereço</label>
-    <input type="text" class="form-control" id="end" placeholder="Rua das Flores">
+    <input type="text" class="form-control" name="end" placeholder="Endereço">
   </div>
   <button type="submit" class="btn btn-default">Ok</button>
 </form>

@@ -1,4 +1,4 @@
 <?php 
-header('Location: ./workspace/home.php');
+header('Location: ./home.php');
 exit;
 ?>

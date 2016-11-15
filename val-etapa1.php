@@ -1,16 +1,16 @@
 		<?php
-			$nome=$_POST["nome"];
-			$user=$_POST["user"];
-			$email=$_POST["email"];
-			$pass=$_POST["pass"];
+			$nome  = $_POST["nome"];
+			$user  = $_POST["user"];
+			$email = $_POST["email"];
+			$pass  = $_POST["pass"];
 
 			$erro = 0;
-			
-			echo $nome;
-			echo $user;
-			echo $email;
-			echo $pass;
-
+			/*
+			echo "<p>" + $nome + "</p>";
+			echo "<p>" + $user + "</p>";
+			echo "<p>" + $email + "</p>";
+			echo "<p>" + $pass + "</p>";
+            */
 			if(empty($nome) || strstr($nome, ' ')==FALSE){
 				echo "Voce deve preencher o nome corretamente.<br>";
 				$erro = 1;
