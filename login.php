@@ -3,15 +3,15 @@
 <div class="container login">
 	<h1>Login</h1>
 
-<form class="form-inline">
+<form class="form-inline" method="POST"  action="val-login.php">
   <div class="form-group">
     <label for="user">Usuario</label>
-    <input type="text" class="form-control" id="user" placeholder="Usuário">
+    <input type="text" class="form-control" name="user" placeholder="Usuário">
   </div>
   <div class="form-group"> </div>
   <div class="form-group">
     <label for="senha">Senha</label>
-    <input type="password" class="form-control" id="pass" placeholder="Senha">
+    <input type="password" class="form-control" name="pass" placeholder="Senha">
   </div>
   <button type="submit" class="btn btn-default">Ok</button>
 </form>

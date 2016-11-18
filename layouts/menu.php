@@ -17,8 +17,12 @@
       <ul class="nav navbar-nav">
         <li><a href="home.php">Home</a></li>
         <li><a href="horario.php">Horarios</a></li>
-        <?php if(isset($_SESSION['usuario'])) {
+        <?php if(isset($_SESSION["id"])) {
           echo '<li><a href="aulas.php">Aulas</a></li>';
+          echo '<li><a href="perfil.php">Perfil</a></li>';
+          if ($_SESSION['id'] == 1) {
+            echo '<li><a href="cadastros.php">Cadastros</a></li>';
+          }
         }?>
         <li><a href="login.php">Login</a></li>
         <li><a href="contato.php">Contato</a></li>
