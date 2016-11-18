@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,7 +17,9 @@
       <ul class="nav navbar-nav">
         <li><a href="home.php">Home</a></li>
         <li><a href="horario.php">Horarios</a></li>
-        <li><a href="aulas.php">Aulas</a></li>
+        <?php if(isset($_SESSION['usuario'])) {
+          echo '<li><a href="aulas.php">Aulas</a></li>';
+        }?>
         <li><a href="login.php">Login</a></li>
         <li><a href="contato.php">Contato</a></li>
       </ul>

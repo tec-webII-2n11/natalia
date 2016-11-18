@@ -11,7 +11,7 @@
   <div class="form-group"> </div>
   <div class="form-group">
     <label for="senha">Senha</label>
-    <input type="password" class="form-control" id="pass" placeholder="******">
+    <input type="password" class="form-control" id="pass" placeholder="Senha">
   </div>
   <button type="submit" class="btn btn-default">Ok</button>
 </form>

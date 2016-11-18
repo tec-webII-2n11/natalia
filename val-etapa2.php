@@ -8,12 +8,12 @@
 
 			$erro = 0;
 			/*
-			echo "<p>" + $nome + "</p>";
-			echo "<p>" + $user + "</p>";
-			echo "<p>" + $email + "</p>";
-			echo "<p>" + $pass + "</p>";
-			echo "<p>" + $tel + "</p><";
-			echo "<p>" + $end + "</p>";
+			echo "<p>" + $nome + "</p><br>";
+			echo "<p>" + $user + "</p><br>";
+			echo "<p>" + $email + "</p><br>";
+			echo "<p>" + $pass + "</p><br>";
+			echo "<p>" + $tel + "</p><br>";
+			echo "<p>" + $end + "</p><br>";
             */
 			if(empty($end) || strstr($end, ' ')==FALSE){
 				echo "Voce deve preencher o endereço corretamente.<br>";

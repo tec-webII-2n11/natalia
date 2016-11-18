@@ -14,24 +14,28 @@
     <div class="row">
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
+                <div class="caption" style="background-image:url(img/musculacao.jpg); height: 125px;"></div>
                 <div class="caption">
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et ullam tenetur, aut provident nihil fugiat ab, enim at laborum rem. Ducimus aut assumenda sit repellat nulla iste nisi, dolores.</p>
+                    <h3>Musculação</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
+                <div class="caption" style="background-image:url(img/pilates.jpg); height: 125px;"></div>
                 <div class="caption">
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et ullam tenetur, aut provident nihil fugiat ab, enim at laborum rem. Ducimus aut assumenda sit repellat nulla iste nisi, dolores.</p>                </div>
+                    <h3>Pilates</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
+                <div class="caption" style="background-image:url(img/yoga.jpg); height: 125px;"></div>
                 <div class="caption">
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et ullam tenetur, aut provident nihil fugiat ab, enim at laborum rem. Ducimus aut assumenda sit repellat nulla iste nisi, dolores.</p>
+                    <h3>Yoga</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
