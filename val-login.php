@@ -1,4 +1,7 @@
 <?php
+    include 'layouts/header.php';
+    include 'layouts/menu.php';
+    
     $user = strip_tags(trim($_POST["user"]));
     $pass = strip_tags(sha1($_POST["pass"]));
     
@@ -6,8 +9,6 @@
     $msg = '';
     
     include 'con.php';
-    
-    session_start();
     
     $conn = conexao();
     

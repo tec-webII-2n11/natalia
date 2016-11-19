@@ -2,7 +2,6 @@
     include 'layouts/header.php';
     include 'layouts/menu.php';
     
-    session_start();
 ?>
 <div class="container home">
     <div class="jumbotron">

@@ -1,15 +1,16 @@
 <?php
   include 'layouts/header.php';
   include 'layouts/menu.php';
+  include 'con.php';
   
- if(isset($_SESSION['id']) && $_SESSION['id'] == 1) {
-    include 'con.php';
-    $conn = conexao();
+    if(isset($_SESSION['id']) && $_SESSION['id'] == 1) {
+      
+      $conn = conexao();
     
-    if($conn->connect_error) {
+      if($conn->connect_error) {
         die("Falha de conexão " . $conn->connect_error);
         $msg = '<br><p class="text-center">Erro ao realizar solicitação de atualização de cadastro!</p><br>';
-    } else {
+      } else {
         $sql = "SELECT id, nome, apelido, email, telefone, endereco FROM usuarios;";
 
     	if(!$stmt = $conn->prepare($sql)) {
@@ -40,6 +41,7 @@
             <td>Telefone</td>
             <td>Endereço</td>
             <td></td>
+            <td></td>
           </tr>';
     
       while ($stmt->fetch()) {
@@ -65,13 +67,20 @@
             <td>' . $tel   . '</td>
             <td>' . $end   . '</td>';
             if ($id != 1) {
-            echo '<td><button type="submit" class="btn btn-default">Editar</button></td>';
+            echo '<td><button type="submit" class="btn btn-default">Editar</button></td>
+                  </form>';
+            echo '<form class="form-group" method="POST"  action="apagar-perfil.php">';
+?>
+            <input type="hidden" name="xid" value="<?php echo $id;?>">
+<?php
+            echo '
+                  <td><button type="submit" class="btn btn-danger">Deletar</button></td>
+                  </form>';
             } else {
-              echo '<td><button type="submit" class="btn btn-danger">Editar</button></td>';
+              echo '<td><button type="submit" class="btn btn-warning">Editar</button></td><td></td>';
             }
           echo
-          '</tr>
-        </form>';
+          '</tr>';
       }
       
       echo
