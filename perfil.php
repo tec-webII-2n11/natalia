@@ -29,6 +29,7 @@
         </div>
         <button type="submit" class="btn btn-default">Alterar Dados</button>
     </form>
+    <?php echo 'PASS: ' . $_SESSION['pass'] . ' ID: ' . $_SESSION['id'] . ' Nome: ' . $_SESSION['nome'] . '  USER: ' . $_SESSION['user'] . ' TEL: ' . $_SESSION['tel'] . ' END: ' . $_SESSION['end'] . " MSG: " . $msg; ?>
 </div>
 <?php
     include 'layouts/footer.php';

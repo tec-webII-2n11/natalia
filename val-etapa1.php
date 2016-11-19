@@ -7,6 +7,7 @@
 			$cpass  = strip_tags(sha1($_POST['cpass']));
 
 			$erro = 0;
+			$msg = '';
 			/*
 			echo "<p>" . $nome . "</p>";
 			echo "<p>" . $user . "</p>";

@@ -3,6 +3,7 @@
     $pass = strip_tags(sha1($_POST["pass"]));
     
     $erro = 0;
+    $msg = '';
     
     include 'con.php';
     
@@ -57,7 +58,7 @@
         
 		if($erro == 0) {
 		        if ($_SESSION["id"] != 1) {
-                    header('Location: aulas.php');    
+                    header('Location: perfil.php');    
                 } else {
                     header('Location: cadastros.php');
                 }
