@@ -1,5 +1,5 @@
 <?php
-    $user = strip_tags($_POST["user"]);
+    $user = strip_tags(trim($_POST["user"]));
     $pass = strip_tags(sha1($_POST["pass"]));
     
     $erro = 0;
@@ -36,26 +36,34 @@
             $erro = 1;
     	} else {
     	    $row = $res->fetch_assoc();
-
-    	    $_SESSION['id']   = $row['id'];
-            $_SESSION['nome'] = $row['nome'];
-            $_SESSION['user'] = $row['apelido'];
-            $_SESSION['end']  = $row['endereco'];
-            $_SESSION['tel']  = $row['telefone'];
-        }
-        
+    	    
+    	    if($pass == $row['senha']) {
+    	    
+    	        $_SESSION['id']    = $row['id'];
+                $_SESSION['nome']  = $row['nome'];
+                $_SESSION['user']  = $row['apelido'];
+                $_SESSION['end']   = $row['endereco'];
+                $_SESSION['tel']   = $row['telefone'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['pass'] = $row['senha'];
+    	    } else {
+    	        include 'login.php';
+    	        echo '<br><p class="text-center"> Usuário ou senha inválido!</p><br>';
+    	        exit;
+    	    }
+    	    
         $stmt->close();
 		$conn->close();
         
 		if($erro == 0) {
-		    if($user == $row["apelido"] && $pass = $row["senha"]) {
 		        if ($_SESSION["id"] != 1) {
-                    include 'aulas.php';    
+                    header('Location: aulas.php');    
                 } else {
-                    include 'cadastros.php';
+                    header('Location: cadastros.php');
                 }
 		    } else {
-		    	echo '<br><p class="text-center"> Erro ao realizar login! ' . $msg . '!</p><br>';
+		        include 'login.php';
+		    	echo '<br><p class="text-center"> Erro ao realizar login! ' . $msg . '</p><br>';
 		    }
 		}
     }

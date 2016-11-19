@@ -1,10 +1,10 @@
 		<?php
-			$nome  = $_POST["nome"];
-			$user  = $_POST["user"];
-			$email = $_POST["email"];
-			$pass  = $_POST["pass"];
-			$tel   = strip_tags($_POST["tel"]);
-			$end   = strip_tags($_POST["end"]);
+			$nome  = $_POST['nome'];
+			$user  = $_POST['user'];
+			$email = $_POST['email'];
+			$pass  = $_POST['pass'];
+			$tel   = strip_tags(trim($_POST["tel"]));
+			$end   = strip_tags(trim($_POST["end"]));
 
 			$erro = 0;
 			$msg  = '';

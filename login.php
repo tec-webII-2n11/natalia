@@ -1,5 +1,7 @@
-<?php include 'layouts/header.php'; ?>
-<?php include 'layouts/menu.php'; ?>
+<?php
+  include 'layouts/header.php';
+  include 'layouts/menu.php';
+?>
 <div class="container login">
 	<h1>Login</h1>
 

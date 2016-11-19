@@ -1,10 +1,10 @@
 		<?php
-			$nome   = strip_tags($_POST["nome"]);
-			$user   = strip_tags($_POST["user"]);
-			$email  = strip_tags($_POST["email"]);
-			$cemail = strip_tags($_POST["cemail"]);
-			$pass   = strip_tags(sha1($_POST["pass"]));
-			$cpass  = strip_tags(sha1($_POST["cpass"]));
+			$nome   = strip_tags(trim($_POST['nome']));
+			$user   = strip_tags(trim($_POST['user']));
+			$email  = strip_tags(trim($_POST['email']));
+			$cemail = strip_tags(trim($_POST['cemail']));
+			$pass   = strip_tags(sha1($_POST['pass']));
+			$cpass  = strip_tags(sha1($_POST['cpass']));
 
 			$erro = 0;
 			/*
