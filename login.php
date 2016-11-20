@@ -22,7 +22,7 @@
   <a href="cadastro.php"><p>Não tem login,cadastrar-se</p></a><br>
 </div>
 <div class="container login">
-  <p class="text-center"><?php  $_GET['msg'] ?></p>
+  <p class="text-center"><?php echo  $_GET['msg'] ?></p>
 </div>
 <
 <?php include 'layouts/footer.php'; ?>
