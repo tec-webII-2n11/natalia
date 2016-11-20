@@ -79,11 +79,13 @@
     	    $msg = $msg . ' Nenhum registro foi atualizado.';
     	    $erro = 1;
     	} else {
-    	    $_SESSION['pass'] = $pass;
-            $_SESSION['nome'] = $nome;
-            $_SESSION['user'] = $user;
-            $_SESSION['tel'] = $tel;
-            $_SESSION['end'] = $end;
+    	    if ($id == $_SESSION['id']) {
+    	        $_SESSION['pass'] = $pass;
+                $_SESSION['nome'] = $nome;
+                $_SESSION['user'] = $user;
+                $_SESSION['tel'] = $tel;
+                $_SESSION['end'] = $end;
+    	    }
     	}
         echo '<p>Query: ' . $stmt->fullQuery . '</p>';
         $stmt->close();
