@@ -1,12 +1,14 @@
 <?php 
     include 'layouts/header.php';
     include 'layouts/menu.php';
-    
     if(isset($_SESSION['id'])) {
 ?>
-<div class="container cadastro col-xs-3">
+<div class="container cadastro col-md-4">
     <h1>Perfil de <?php echo $_SESSION['nome']; ?> </h1>
 	<form class="form-group" method="POST"  action="alterar-perfil.php">
+	    <div class="form-group">
+            <label for="name">ID: <?php echo $_SESSION['id']?></label>
+        </div>
 	    <div class="form-group">
             <label for="name">Nome Completo</label>
             <p><?php echo $_SESSION['nome']; ?></p>
@@ -29,7 +31,6 @@
         </div>
         <button type="submit" class="btn btn-default">Alterar Dados</button>
     </form>
-    <?php echo 'PASS: ' . $_SESSION['pass'] . ' ID: ' . $_SESSION['id'] . ' Nome: ' . $_SESSION['nome'] . '  USER: ' . $_SESSION['user'] . ' TEL: ' . $_SESSION['tel'] . ' END: ' . $_SESSION['end'] . " MSG: " . $msg; ?>
 </div>
 <?php
     include 'layouts/footer.php';

@@ -47,10 +47,10 @@
                 $_SESSION['end']   = $row['endereco'];
                 $_SESSION['tel']   = $row['telefone'];
                 $_SESSION['email'] = $row['email'];
-                $_SESSION['pass'] = $row['senha'];
+                $_SESSION['pass']  = $row['senha'];
     	    } else {
-    	        include 'login.php';
-    	        echo '<br><p class="text-center"> Usuário ou senha inválido!</p><br>';
+    	        $msg = 'Usuário ou senha inválido!';
+    	        header('Location: login.php?msg=' . $msg);
     	        exit;
     	    }
     	    
@@ -59,13 +59,16 @@
         
 		if($erro == 0) {
 		        if ($_SESSION["id"] != 1) {
-                    header('Location: perfil.php');    
+                    header('Location: perfil.php');
+                    exit;
                 } else {
                     header('Location: cadastros.php');
+                    exit;
                 }
 		    } else {
-		        include 'login.php';
-		    	echo '<br><p class="text-center"> Erro ao realizar login! ' . $msg . '</p><br>';
+		        $msg = ' Erro ao realizar login! ' . $msg;
+		        header('Location: login.php?msg=' . $msg);
+		        exit;
 		    }
 		}
     }

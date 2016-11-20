@@ -45,7 +45,7 @@
           </tr>';
     
       while ($stmt->fetch()) {
-        if ($id != 1) {
+        if ($id > 1) {
               echo '<form class="form-group" method="POST"  action="admin-perfil.php">';
             } else {
               echo '<form class="form-group" method="POST"  action="alterar-perfil.php">';
@@ -77,7 +77,8 @@
                   <td><button type="submit" class="btn btn-danger">Deletar</button></td>
                   </form>';
             } else {
-              echo '<td><button type="submit" class="btn btn-warning">Editar</button></td><td></td>';
+              echo '<td><button type="submit" class="btn btn-warning">Editar</button></td><td></td>
+                  </form>';
             }
           echo
           '</tr>';

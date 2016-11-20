@@ -8,6 +8,10 @@
     <h1>Alterar perfil de <?php echo $_SESSION['nome']; ?> </h1>
 	<form class="form-group" method="POST"  action="val-alteracao.php">
 	    <div class="form-group">
+            <label for="name">ID: <?php echo $_SESSION['id'];?></label>
+            <input type="hidden" class="form-control" name="id" placeholder="Nome" value="<?php echo $_SESSION['id'];?>">
+        </div>
+	    <div class="form-group">
             <label for="name">Nome Completo</label>
             <input type="text" class="form-control" name="nome" placeholder="Nome" value="<?php echo $_SESSION['nome'];?>">
         </div>
